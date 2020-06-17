@@ -1,10 +1,10 @@
 import React from 'react';
-import MainCarousel from '../../components/main-carousel/main-carousel.component';
+import LandingSearch from '../../components/landing-search/landing-search.component';
 
 const HomePage = () => {
   return (
     <div>
-      <MainCarousel />
+      <LandingSearch />
     </div>
   );
 };
