@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 const NavigationBar = styled.div`
   display: flex;
   justify-content: center;
-  width: 100vw;
   border-bottom: 1px solid lightgray;
 
   .container {
@@ -49,15 +48,15 @@ const Links = styled.div`
 const NavBar = () => {
   return (
     <NavigationBar>
-      <div className='container'>
-        <Link to='/' className='logo'>
-          <span className='leftSide'>my</span>
-          <span className='rightSide'>TRAVEL</span>
+      <div className="container">
+        <Link to="/" className="logo">
+          <span className="leftSide">my</span>
+          <span className="rightSide">TRAVEL</span>
         </Link>
         <Links>
-          <Link to='/'>HOME</Link>
-          <Link to='/destinations'>DESTINATIONS</Link>
-          <Link to='/about-us'>ABOUT US</Link>
+          <Link to="/">HOME</Link>
+          <Link to="/destinations">DESTINATIONS</Link>
+          <Link to="/about-us">ABOUT US</Link>
         </Links>
       </div>
     </NavigationBar>
