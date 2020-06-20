@@ -7,6 +7,7 @@ import manMountain from '../../assets/carousel-background/man-mountain.jpg';
 
 const Container = styled.div`
   height: 450px;
+  width: 100%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -14,13 +15,13 @@ const Container = styled.div`
   div:last-child {
     margin: 0 auto;
     position: absolute;
-    top: 76%;
+    top: 86%;
     width: 100%;
   }
 `;
 
 const ImageContainer = styled.div`
-  height: 80%;
+  height: 90%;
   background: url(${manMountain}) no-repeat center center;
   background-size: cover;
   display: flex;
@@ -41,7 +42,7 @@ const DarkOverlay = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  height: 80%;
+  height: 90%;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
 `;
@@ -54,10 +55,10 @@ const LandingSearch = () => {
         <h2>Your next big adventure begins here</h2>
       </ImageContainer>
       <SearchInput
-        className='carrasco'
-        widthPercentage={40}
-        placeHolder='Enter a destination'
-        type='secondary'
+        className="carrasco"
+        widthPercentage={50}
+        placeHolder="Enter a destination"
+        type="secondary"
       />
     </Container>
   );

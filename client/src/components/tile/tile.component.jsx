@@ -21,7 +21,7 @@ const Tile = styled.div`
     background: rgba(0, 0, 0, 0);
   }
 
-  h4 {
+  h3 {
     color: white;
     z-index: 1;
     text-transform: uppercase;
@@ -29,11 +29,13 @@ const Tile = styled.div`
   }
 
   &:hover {
+    cursor: pointer;
+
     .darkOverlay {
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.6);
     }
 
-    h4 {
+    h3 {
       display: flex;
     }
   }
@@ -46,7 +48,7 @@ const GridTile = ({ columnWidth, heightInPixels, text, imgUrl }) => {
       heightInPixels={heightInPixels}
       imgUrl={imgUrl}>
       <div className="darkOverlay" />
-      <h4>{text}</h4>
+      <h3>{text}</h3>
     </Tile>
   );
 };
