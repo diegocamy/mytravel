@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Tile = styled.div`
   grid-column: span ${props => props.columnWidth};
@@ -23,7 +24,7 @@ const Tile = styled.div`
 
   h3 {
     color: white;
-    z-index: 1;
+    z-index: 3;
     text-transform: uppercase;
     display: none;
   }
@@ -41,13 +42,15 @@ const Tile = styled.div`
   }
 `;
 
-const GridTile = ({ columnWidth, heightInPixels, text, imgUrl }) => {
+const GridTile = ({ columnWidth, heightInPixels, text, imgUrl, link }) => {
   return (
     <Tile
       columnWidth={columnWidth}
       heightInPixels={heightInPixels}
       imgUrl={imgUrl}>
-      <div className="darkOverlay" />
+      <Link to={link}>
+        <div className="darkOverlay" />
+      </Link>
       <h3>{text}</h3>
     </Tile>
   );

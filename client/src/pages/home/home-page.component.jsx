@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 import LandingSearch from '../../components/landing-search/landing-search.component';
 import Mosaic from '../../components/mosaic/mosaic.component';
@@ -23,6 +24,10 @@ const Home = styled.div`
   p {
     margin-bottom: 25px;
   }
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 const HomePage = () => {
@@ -30,7 +35,7 @@ const HomePage = () => {
     <Home>
       <LandingSearch />
       <h2>Don't know where to start?</h2>
-      <p>Take a look at our recommended collection</p>
+      <p>Take a look at our recommended destinations</p>
       <Mosaic columnNumber={6} widthPercentage={70}>
         {recommendedCollection.map((item, idx) => {
           const { img, title, url, id } = item;
@@ -42,6 +47,7 @@ const HomePage = () => {
                 imgUrl={img}
                 heightInPixels={200}
                 text={title}
+                link={`destinations/${url}`}
               />
             );
           } else {
@@ -51,14 +57,17 @@ const HomePage = () => {
                 imgUrl={img}
                 heightInPixels={200}
                 text={title}
+                link={`destinations/${url}`}
               />
             );
           }
         })}
       </Mosaic>
-      <CustomButton type="secondary" fontSize={1.4}>
-        View All
-      </CustomButton>
+      <Link to="/destinations">
+        <CustomButton type="secondary" fontSize={1.4}>
+          View All
+        </CustomButton>
+      </Link>
     </Home>
   );
 };

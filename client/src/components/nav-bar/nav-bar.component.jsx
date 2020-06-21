@@ -8,7 +8,7 @@ const NavigationBar = styled.div`
   border-bottom: 1px solid lightgray;
 
   .container {
-    width: 90%;
+    width: 72%;
     display: flex;
     justify-content: space-between;
 
